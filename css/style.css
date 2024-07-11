@@ -1,0 +1,122 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --red-card: hsl(0, 78%, 62%);
+    --cyan-card: hsl(180, 62%, 55%);
+    --orange-card: hsl(34, 97%, 64%);
+    --blue-card: hsl(212, 86%, 64%);
+
+    --title-color: hsl(234, 12%, 34%);
+    --paragraph-color: hsl(229, 6%, 66%);
+    --bg-color: hsl(0, 0%, 98%);
+
+    --fs: 15px;
+    --ff: "Poppins", sans-serif;
+
+    --fw-small: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    --b-radius: 0.25rem;
+}
+
+html {
+    font-size: var(--fs);
+}
+
+body {
+    font-family: var(--ff);
+    background-color: var(--bg-color);
+    min-height: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header p {
+    color: var(--paragraph-color);
+}
+
+.container {
+    max-width: 500px;
+}
+
+.header-title {
+    color: var(--title-color);
+    padding-bottom: 20px;
+}
+
+.header-title span {
+    font-weight: var(--fw-small);
+}
+
+.layout-grid {
+    --gap: 2rem;
+    display: grid;
+    place-content: center;
+    gap: var(--gap);
+    margin-inline: 200px;
+    margin-block: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.card {
+    min-height: 200px;
+    padding: 20px;
+    border-radius: var(--b-radius);
+    box-shadow: 0 0.5rem 1rem -0.5rem rgb(50 100 150/ 0.3);
+    background-color: #fff;
+    width: 100%;
+}
+
+.card img {
+    margin-top: 50px;
+    float: right;
+}
+
+.card1 {
+    border-top: var(--b-radius) solid var(--cyan-card);
+}
+
+.card2 {
+    border-top: var(--b-radius) solid var(--red-card);
+}
+
+.card3 {
+    border-top: var(--b-radius) solid var(--orange-card);
+}
+
+.card4 {
+    border-top: var(--b-radius) solid var(--blue-card);
+}
+
+@media (min-width: 800px) {
+    .layout-grid {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        place-items: center;
+    }
+}
+
+footer {
+    padding: 20px;
+    margin-top: 50px;
+}
